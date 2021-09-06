@@ -3,7 +3,7 @@ import { WhiteWebSdk } from "white-web-sdk";
 
 import "@netless/window-manager/dist/style.css";
 import { WindowManager } from "@netless/window-manager";
-import TodoApp from "./src";
+import Pong from "./src";
 
 declare global {
   var room: Room;
@@ -65,10 +65,10 @@ async function joinRoom() {
   window.manager = room.getInvisiblePlugin(WindowManager.kind) as WindowManager;
   manager.switchMainViewToWriter();
 
-  WindowManager.register({ kind: "TodoApp", src: TodoApp });
+  WindowManager.register({ kind: "Pong", src: Pong });
 
   $("#btn-add-app")?.addEventListener("click", () => {
-    manager.addApp({ kind: "TodoApp" });
+    manager.addApp({ kind: "Pong" });
   });
 
   $("#btn-reset")?.addEventListener("click", async () => {
