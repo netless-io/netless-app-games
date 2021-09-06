@@ -1,0 +1,7 @@
+{
+  "name": "netless-app-games-monorepo",
+  "private": true,
+  "workspaces": [
+    "games/*"
+  ]
+}
